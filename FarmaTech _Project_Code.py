@@ -18,13 +18,18 @@ optimal_ranges = {
 }
 # Function - read temperature data from the sensor
 def read_temperature_humidity():
-    # Sensor Integration to be inserted here
-    temperature = 60 
-    humidity = 40  #Example value
-    return temperature, humidity
+    try:
+        dht_pin = board.D4  # Adjust the pin as per your wiring
+        dht_sensor = adafruit_dht.DHT22(dht_pin)
+
+        temperature = dht_sensor.temperature
+        humidity = dht_sensor.humidity
+
+        return temperature, humidity
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return None, None
     
-
-
 # Function - analyze temperature data and provide recommendations
 def compare_with_optimal_ranges(crop, season, temperature, humidity):
     if crop in optimal_ranges and season in optimal_ranges[crop]:

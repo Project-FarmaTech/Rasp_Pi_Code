@@ -8,92 +8,74 @@ def read_soil_moisture(crop):
 
 # Function - analyze soil moisture data and provide recommendations
 def analyze_soil_moisture(soil_moisture_value, crop, season):
-    switch(crop):
-	case "Rice":
-		switch (season):
-			case "Summer":
-				if soil_moisture_value < 30:
-                    return "The soil is too dry for Rice in Summer. Please irrigate immediately."
-            	elif soil_moisture_value >= 30 and soil_moisture_value < 60:
-          		    return "Soil moisture is at an optimal level for Rice in Summer."
-          		else:
-            		return "The soil is too wet for Rice in Summer. Reduce irrigation."
-            	break;
-            
-            case "Monsoon":
-                if soil_moisture_value < 60:
-                    return "Soil moisture is low for Rice in Monsoon. Consider additional irrigation."
-                elif soil_moisture_value >= 60 and soil_moisture_value < 85:
-                    return "Soil moisture is at an optimal level for Rice in Monsoon."
-                else:
-                    return "The soil is too wet for Rice in Monsoon. Reduce irrigation."
-                break;
-            case "Winter":
-                if soil_moisture_value < 40:
-                    return "The soil is too dry for Rice in Winter. Please irrigate if necessary."
-                elif soil_moisture_value >= 40 and soil_moisture_value < 70:
-                    return "Soil moisture is at an optimal level for Rice in Winter."
-                else:
-                    return "The soil is too wet for Rice in Winter. Ensure proper drainage."
-                break;
-        break;
-    case "Wheat":
-        switch(season):
-            case "Summer":
-                if soil_moisture_value < 25:
-                    return "The soil is too dry for Wheat in Summer. Please irrigate immediately."
-                elif soil_moisture_value >= 25 and soil_moisture_value < 60:
-                    return "Soil moisture is at an optimal level for Wheat in Summer."
-                else:
-                    return "The soil is too wet for Wheat in Summer. Reduce irrigation."
-                break;
-            case "Monsoon":
-                if soil_moisture_value < 60:
-                    return "Soil moisture is low for Wheat in Monsoon. Consider additional irrigation."
-                elif soil_moisture_value >= 60 and soil_moisture_value < 85:
-                    return "Soil moisture is at an optimal level for Wheat in Monsoon."
-                else:
-                    return "The soil is too wet for Wheat in Monsoon. Reduce irrigation."
-                break;
-            case "Winter":
-                if soil_moisture_value < 30:
-                    return "The soil is too dry for Wheat in Winter. Please irrigate if necessary."
-                elif soil_moisture_value >= 30 and soil_moisture_value < 60:
-                    return "Soil moisture is at an optimal level for Wheat in Winter."
-                else:
-                    return "The soil is too wet for Wheat in Winter. Ensure proper drainage."
-                break;
-        break;
-    case "Cotton":
-        switch (season):
-            case "Summer":
-                if soil_moisture_value < 30:
-                    return "The soil is too dry for Cotton in Summer. Please irrigate immediately."
-                elif soil_moisture_value >= 30 and soil_moisture_value < 60:
-                    return "Soil moisture is at an optimal level for Cotton in Summer."
-                else:
-                    return "The soil is too wet for Cotton in Summer. Reduce irrigation."
-                break;
-            case "Monsoon":
-                if soil_moisture_value < 60:
-                    return "Soil moisture is low for Cotton in Monsoon. Consider additional irrigation."
-                elif soil_moisture_value >= 60 and soil_moisture_value < 85:
-                    return "Soil moisture is at an optimal level for Cotton in Monsoon."
-                else:
-                    return "The soil is too wet for Cotton in Monsoon. Reduce irrigation."
-                break;
-            case "Winter":
-                if soil_moisture_value < 35:
-                    return "The soil is too dry for Cotton in Winter. Please irrigate if necessary."
-                elif soil_moisture_value >= 35 and soil_moisture_value < 70:
-                    return "Soil moisture is at an optimal level for Cotton in Winter."
-                else:
-                    return "The soil is too wet for Cotton in Winter. Ensure proper drainage."
-                break;
-        break;
-    default:
-        print("Invalid crop selection.")
-        break;
+    if crop == "Rice":
+        if season == "Summer":
+            if soil_moisture_value < 30:
+                return "The soil is too dry for Rice in Summer. Please irrigate immediately."
+            elif soil_moisture_value >= 30 and soil_moisture_value < 60:
+                return "Soil moisture is at an optimal level for Rice in Summer."
+            else:
+                return "The soil is too wet for Rice in Summer. Reduce irrigation."
+        elif season == "Monsoon":
+            if soil_moisture_value < 60:
+                return "Soil moisture is low for Rice in Monsoon. Consider additional irrigation."
+            elif soil_moisture_value >= 60 and soil_moisture_value < 85:
+                return "Soil moisture is at an optimal level for Rice in Monsoon."
+            else:
+                return "The soil is too wet for Rice in Monsoon. Reduce irrigation."
+        elif season == "Winter":
+            if soil_moisture_value < 40:
+                return "The soil is too dry for Rice in Winter. Please irrigate if necessary."
+            elif soil_moisture_value >= 40 and soil_moisture_value < 70:
+                return "Soil moisture is at an optimal level for Rice in Winter."
+            else:
+                return "The soil is too wet for Rice in Winter. Ensure proper drainage."
+    elif crop == "Wheat":
+        if season == "Summer":
+            if soil_moisture_value < 25:
+                return "The soil is too dry for Wheat in Summer. Please irrigate immediately."
+            elif soil_moisture_value >= 25 and soil_moisture_value < 60:
+                return "Soil moisture is at an optimal level for Wheat in Summer."
+            else:
+                return "The soil is too wet for Wheat in Summer. Reduce irrigation."
+        elif season == "Monsoon":
+            if soil_moisture_value < 60:
+                return "Soil moisture is low for Wheat in Monsoon. Consider additional irrigation."
+            elif soil_moisture_value >= 60 and soil_moisture_value < 85:
+                return "Soil moisture is at an optimal level for Wheat in Monsoon."
+            else:
+                return "The soil is too wet for Wheat in Monsoon. Reduce irrigation."
+        elif season == "Winter":
+            if soil_moisture_value < 30:
+                return "The soil is too dry for Wheat in Winter. Please irrigate if necessary."
+            elif soil_moisture_value >= 30 and soil_moisture_value < 60:
+                return "Soil moisture is at an optimal level for Wheat in Winter."
+            else:
+                return "The soil is too wet for Wheat in Winter. Ensure proper drainage."
+    elif crop == "Cotton":
+        if season == "Summer":
+            if soil_moisture_value < 30:
+                return "The soil is too dry for Cotton in Summer. Please irrigate immediately."
+            elif soil_moisture_value >= 30 and soil_moisture_value < 60:
+                return "Soil moisture is at an optimal level for Cotton in Summer."
+            else:
+                return "The soil is too wet for Cotton in Summer. Reduce irrigation."
+        elif season == "Monsoon":
+            if soil_moisture_value < 60:
+                return "Soil moisture is low for Cotton in Monsoon. Consider additional irrigation."
+            elif soil_moisture_value >= 60 and soil_moisture_value < 85:
+                return "Soil moisture is at an optimal level for Cotton in Monsoon."
+            else:
+                return "The soil is too wet for Cotton in Monsoon. Reduce irrigation."
+        elif season == "Winter":
+            if soil_moisture_value < 35:
+                return "The soil is too dry for Cotton in Winter. Please irrigate if necessary."
+            elif soil_moisture_value >= 35 and soil_moisture_value < 70:
+                return "Soil moisture is at an optimal level for Cotton in Winter."
+            else:
+                return "The soil is too wet for Cotton in Winter. Ensure proper drainage."
+    else:
+        return "Invalid crop selection."
 
 # Function - read temperature data from the sensor
 def read_temperature(crop):
@@ -103,34 +85,29 @@ def read_temperature(crop):
 
 # Function - analyze temperature data and provide recommendations
 def analyze_temperature(temperature_value, crop):
-    switch(crop):
-        case "Rice":
-            if temperature_value < 20:
-                return "The temperature is too low for Rice. Consider using heating methods."
-            elif temperature_value >= 20 and temperature_value < 30:
-                return "Temperature is within the optimal range for Rice cultivation."
-            else:
-                return "The temperature is too high for Rice. Provide shade if possible."
-            break;
-        case "Wheat":
-            if temperature_value < 10:
-                return "The temperature is too low for Wheat. Consider using heating methods."
-            elif temperature_value >= 10 and temperature_value < 25:
-                return "Temperature is within the optimal range for Wheat cultivation."
-            else:
-                return "The temperature is too high for Wheat. Provide shade if possible."
-            break;
-        case "Cotton":
-            if temperature_value < 25:
-                return "The temperature is too low for Cotton. Consider using heating methods."
-            elif temperature_value >= 25 and temperature_value < 35:
-                return "Temperature is within the optimal range for Cotton cultivation."
-            else:
-                return "The temperature is too high for Cotton. Provide shade if possible."
-            break;
-        default:
-            return "Invalid crop selection."
-            break;
+    if crop == "Rice":
+        if temperature_value < 20:
+            return "The temperature is too low for Rice. Consider using heating methods."
+        elif temperature_value >= 20 and temperature_value < 30:
+            return "Temperature is within the optimal range for Rice cultivation."
+        else:
+            return "The temperature is too high for Rice. Provide shade if possible."
+    elif crop == "Wheat":
+        if temperature_value < 10:
+            return "The temperature is too low for Wheat. Consider using heating methods."
+        elif temperature_value >= 10 and temperature_value < 25:
+            return "Temperature is within the optimal range for Wheat cultivation."
+        else:
+            return "The temperature is too high for Wheat. Provide shade if possible."
+    elif crop == "Cotton":
+        if temperature_value < 25:
+            return "The temperature is too low for Cotton. Consider using heating methods."
+        elif temperature_value >= 25 and temperature_value < 35:
+            return "Temperature is within the optimal range for Cotton cultivation."
+        else:
+            return "The temperature is too high for Cotton. Provide shade if possible."
+    else:
+        return "Invalid crop selection."
 
 # Function - read humidity data from the sensor
 def read_humidity(crop):
@@ -140,34 +117,29 @@ def read_humidity(crop):
 
 # Function - analyze humidity data
 def analyze_humidity(humidity_value, crop):
-    switch(crop):
-        case "Rice":
-            if humidity_value < 40:
-                return "The air is too dry for Rice. Consider increasing humidity."
-            elif humidity_value >= 40 and humidity_value < 70:
-                return "Humidity is at an optimal level for Rice cultivation."
-            else:
-                return "The air is too humid for Rice. Ventilate the area."
-            break;
-        case "Wheat":
-            if humidity_value < 30:
-                return "The air is too dry for Wheat. Consider increasing humidity."
-            elif humidity_value >= 30 and humidity_value < 60:
-                return "Humidity is at an optimal level for Wheat cultivation."
-            else:
-                return "The air is too humid for Wheat. Ventilate the area."
-            break;
-        case "Cotton":
-            if humidity_value < 40:
-                return "The air is too dry for Cotton. Consider increasing humidity."
-            elif humidity_value >= 40 and humidity_value < 70:
-                return "Humidity is at an optimal level for Cotton cultivation."
-            else:
-                return "The air is too humid for Cotton. Ventilate the area."
-            break;
-        default:
-            return "Invalid crop selection."
-            break;
+    if crop == "Rice":
+        if humidity_value < 40:
+            return "The air is too dry for Rice. Consider increasing humidity."
+        elif humidity_value >= 40 and humidity_value < 70:
+            return "Humidity is at an optimal level for Rice cultivation."
+        else:
+            return "The air is too humid for Rice. Ventilate the area."
+    elif crop == "Wheat":
+        if humidity_value < 30:
+            return "The air is too dry for Wheat. Consider increasing humidity."
+        elif humidity_value >= 30 and humidity_value < 60:
+            return "Humidity is at an optimal level for Wheat cultivation."
+        else:
+            return "The air is too humid for Wheat. Ventilate the area."
+    elif crop == "Cotton":
+        if humidity_value < 40:
+            return "The air is too dry for Cotton. Consider increasing humidity."
+        elif humidity_value >= 40 and humidity_value < 70:
+            return "Humidity is at an optimal level for Cotton cultivation."
+        else:
+            return "The air is too humid for Cotton. Ventilate the area."
+    else:
+        return "Invalid crop selection."
 
 # Function to make decisions based on sensor readings, crop, and season
 def make_decision(crop, season):

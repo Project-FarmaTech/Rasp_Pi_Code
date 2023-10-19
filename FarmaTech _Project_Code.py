@@ -51,7 +51,6 @@ def compare_with_optimal_ranges(crop, season, temperature, humidity):
     else:
         return "Invalid crop or season."
 
-
 # Main function for crop selection and season selection
 '''def crop_selection():
     while True:

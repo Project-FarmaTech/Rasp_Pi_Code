@@ -3,7 +3,7 @@
 Agriculture helper module
 
 - detect humidity, sunlight, day or night and control water accordingly (A)
-- can be set for different crops (m)
+- can be set for different crops (M)
 - can be for different seasons (m)
 - can be connected to ultrasonic pest repelling devices (m)
 

@@ -1,6 +1,6 @@
 # Rasp_Pi_Code
 
-Agriculture helper module for
+Agriculture helper module for the
 
 - detect humidity, sunlight, day or night and control water accordingly (A)
 - can be set for different crops (M)

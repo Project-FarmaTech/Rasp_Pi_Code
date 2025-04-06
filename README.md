@@ -1,6 +1,6 @@
 # Rasp_Pi_Code
 
-We developed Agriculture helper module for the following usecases -
+We developed Agriculture helper module for the following usecases -  
 
 - detect humidity, sunlight, day or night and control water accordingly (A)
 - can be set for different crops (M)

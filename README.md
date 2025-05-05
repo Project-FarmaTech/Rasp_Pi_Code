@@ -10,7 +10,7 @@ We developed an agricultural helper module for the following usecases -
 ===========================================================================
 
 Jai Singh- RA2212701010011  
-Hemant - RA2212701010010  
+Hemant Garg- RA2212701010010  
 Lakshay - RA2212701010051  
 Saptarishi - RA2212701010035  
 Sparsh - RA2212701010005  

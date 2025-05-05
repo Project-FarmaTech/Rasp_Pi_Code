@@ -11,7 +11,7 @@ We developed an agricultural helper module for the following usecases -
 
 Jai Singh - RA2212701010011  
 Hemant Garg - RA2212701010010  
-Lakshay Kothari- RA2212701010051  
+Lakshay Kothari - RA2212701010051  
 Saptarishi Sarkar- RA2212701010035  
 Sparsh Goyal- RA2212701010005  
 
